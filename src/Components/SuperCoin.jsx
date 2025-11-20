@@ -1,5 +1,6 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import { useSelector } from "react-redux";
+import "./SuperCoin.css";
 
 const SuperCoin = () => {
   const [superCoins, setSuperCoins] = useState(0);
@@ -23,14 +24,13 @@ const SuperCoin = () => {
   }, [totalAmount]);
 
   return (
-    <>
-      <div className="super-coins" style={{ textAlign: "center" }}>
-        <h2 className="super-coins-title">Super Coins</h2>
-        <p className="super-coins-info">
-          You will earn {superCoins} super coins with this purchase.
-        </p>
-      </div>
-    </>
+    <div className="super-coin">
+      <h2 className="super-coin-title">Super Coins</h2>
+      <p className="super-coin-info">
+        You will earn <span className="super-coin-count">{superCoins}</span>{" "}
+        super coins with this purchase.
+      </p>
+    </div>
   );
 };
 

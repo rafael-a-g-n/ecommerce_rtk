@@ -1,29 +1,104 @@
 .product-list {
-    flex: 1;
-    padding: 0 20px;
+  flex: 1;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  padding: 25px;
+  margin: 15px;
+  max-width: 480px;
+  width: 100%;
+}
+
+.product-list-title {
+  text-align: center;
+  color: #282c34;
+  margin-bottom: 30px;
+  font-size: 1.8rem;
+  font-weight: 600;
+  padding-bottom: 10px;
+  border-bottom: 2px solid #61dafb;
+}
+
+.product-list-items {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.product-list-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 0;
+  border-bottom: 1px solid #eee;
+}
+
+.product-list-item:last-child {
+  border-bottom: none;
+}
+
+.product-list-item span {
+  font-size: 1.1rem;
+  color: #555;
+}
+
+.add-to-cart-btn {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 25px;
+  cursor: pointer;
+  font-size: 0.95rem;
+  font-weight: 600;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.add-to-cart-btn:hover {
+  background-color: #0056b3;
+  transform: translateY(-2px);
+}
+
+.add-to-cart-btn:active {
+  transform: translateY(0);
+}
+
+@media (max-width: 768px) {
+  .product-list {
+    margin: 10px auto;
+    padding: 20px;
   }
-  
+
   .product-list-title {
-    text-align: center;
+    font-size: 1.6rem;
+    margin-bottom: 25px;
   }
-  
-  .product-list-items {
-    list-style: none;
-    padding: 0;
-  }
-  
+
   .product-list-item {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 10px;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 12px 0;
   }
-  
+
+  .product-list-item span {
+    margin-bottom: 8px;
+  }
+
   .add-to-cart-btn {
-    background-color: #007bff;
-    color: #fff;
-    border: none;
-    padding: 5px 10px;
-    border-radius: 5px;
-    cursor: pointer;
+    width: 100%;
+    margin-top: 10px;
+    padding: 12px;
   }
+}
+
+@media (max-width: 480px) {
+  .product-list {
+    margin: 10px;
+    padding: 15px;
+  }
+
+  .product-list-title {
+    font-size: 1.4rem;
+    margin-bottom: 20px;
+  }
+}

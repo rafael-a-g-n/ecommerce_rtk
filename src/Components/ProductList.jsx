@@ -33,7 +33,7 @@ const ProductList = () => {
                   : ""
               }`}
               onClick={() => handleAddToCart(product)}
-              disabled={cartItems.some((item) => item.id === product.id)} // Disable if already in cart
+              disabled={cartItems.some((item) => item.id === product.id)}
             >
               {cartItems.some((item) => item.id === product.id)
                 ? "Added"
